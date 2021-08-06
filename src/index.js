@@ -5,7 +5,8 @@ const Endpoints = require("./routers/endpoints");
 
 const app = express();
 const port = process.env.PORT || 8001;
-
+var cors = require('cors')
+app.use(cors())
 app.use(express.json());
 
 app.use((req, res, next) => {
