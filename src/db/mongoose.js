@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://sarthak55k:Sarthak@123@cluster0.xfgss.mongodb.net/dataquest?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_CONNECTION_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,

@@ -32,7 +32,7 @@ Endpoints.post("/login", (req, res) => {
         //  obj.code == 1 means the user data is not present in our database so we need to fetch it from pulzion database
         if (obj.code == 1) {
             
-            Axios.post("https://api-ems.pulzion.in/auth/login", {
+            Axios.post(`${process.env.EMS_SERVER}/auth/login`, {
                     email: req.body.email,
                     password: req.body.password
                 })

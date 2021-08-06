@@ -3,7 +3,7 @@ require("./db/mongoose");
 const Endpoints = require("./routers/endpoints");
 
 const app = express();
-const port = 8001;
+const port = process.env.PORT || 8001;
 
 app.use(express.json());
 
@@ -18,5 +18,5 @@ app.use((req, res, next) => {
 app.use(Endpoints);
 
 app.listen(port, async() => {
-    console.log(process.env.PORT || 8001);
+    console.log("LISTEN TO PORT " + port);
 });
