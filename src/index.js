@@ -18,5 +18,5 @@ app.use((req, res, next) => {
 app.use(Endpoints);
 
 app.listen(port, async() => {
-    console.log("LISTEN TO PORT " + port);
+    console.log(process.env.PORT || 8001);
 });
