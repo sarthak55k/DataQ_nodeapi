@@ -328,7 +328,7 @@ Endpoints.get("/leaderboard", (_req, res) => {
 Endpoints.get("/test", (req, res) => {
     
     console.log(req.body);
-    res.send(<h1>Hello</h1>)
+    res.send("Working");
 
 });
 
